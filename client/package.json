@@ -1,0 +1,11 @@
+{
+  "name": "realestate-client",
+  "version": "0.0.1",
+  "description": "Realestate Client for Jeff's Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Me",
+  "license": "ISC"
+}
