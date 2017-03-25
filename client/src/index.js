@@ -1,5 +1,5 @@
 console.log("HI");
 console.log("there");
 
-import string from "./test";
+import string from "./features/test";
 console.log(string);

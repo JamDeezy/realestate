@@ -2,6 +2,7 @@ import AutoPrefixer from "autoprefixer";
 import Config from "webpack-config";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import ExtractTextPlugin from "extract-text-webpack-plugin";
+import path from "path";
 
 export default new Config().merge({
   context: __dirname,
@@ -12,7 +13,8 @@ export default new Config().merge({
     new ExtractTextPlugin("style.css"),
     new HtmlWebpackPlugin({
       title: "realestate",
-      filename: "index.html",
+      filename: "app.html",
+      inject: true,
       template: "../src/index.html"
     })
   ],
@@ -25,13 +27,7 @@ export default new Config().merge({
       },
       {
         test: /\.s?css$/,
-        use: [
-          "style-loader",
-          {
-            loader: "sass-loader"
-          },
-          "postcss-loader"
-        ]
+        use: ["postcss-loader", "style-loader", "sass-loader"]
       },
       {
         test: /\.html$/,
