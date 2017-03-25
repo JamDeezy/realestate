@@ -27,7 +27,17 @@ export default new Config().merge({
       },
       {
         test: /\.s?css$/,
-        use: ["postcss-loader", "style-loader", "sass-loader"]
+        use: [
+          "style-loader",
+          "sass-loader",
+          {
+            loader: "postcss-loader",
+            options: {
+              sourceMap: "inline",
+              config: "config/postcss.config.js"
+            }
+          }
+        ]
       },
       {
         test: /\.html$/,
