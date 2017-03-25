@@ -17,9 +17,11 @@
 /tmp
 
 # Client files
-/node_modules
-/build
-/npm-debug.log
+/client/node_modules
+/client/build
+/client/npm-debug.log
+/client/.yarn-integrity
+
 
 # Other files
 /config/database.yml
