@@ -1,15 +1,80 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <title>Jeff's App</title>
-  <base href="/">
-</head>
+  <head>
+    <title>Jeff's App</title>
+    <base href="/">
 
-<body ng-app="app">
-  <div>Hello world</div>
-  <a ui-sref="another">View Contact</a>
-  <div id="app" ui-view="root"></div>
-</body>
+    <!-- Manual import of libraries that are just too annoying to import with ES6 -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+          rel="stylesheet">
+    <!--<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          rel="stylesheet">-->
+  </head>
+
+  <body ng-app="app">
+    <md-content class="md-padding">
+      <a class="social"
+         href="//www.facebook.com/jeffrey.shew.5?fref=ts"><i class="fa fa-facebook"></i></a>
+      <a class="social"
+         href="//www.google.ca/"><i class="fa fa-google"></i></a>
+      <a class="social"
+         href="//twitter.com/"><i class="fa fa-twitter"></i></a>
+      <a class="social"
+         href="//linkedin.com/"><i class="fa fa-linkedin"></i></a>
+    </md-content>
+
+    <md-content class="md-padding">
+      <md-nav-bar md-selected-nav-item="$state.current.name"
+                  nav-bar-aria-label="navigation links">
+        <span flex></span>
+        <md-nav-item md-nav-sref="home"
+                     name="home">
+          HOME
+        </md-nav-item>
+        <md-nav-item md-nav-click="goto('page6')"
+                     name="page2">
+          OWNERS
+        </md-nav-item>
+        <md-nav-item md-nav-click="goto('page6')"
+                     name="page3">
+          TENANTS
+        </md-nav-item>
+        <md-nav-item md-nav-click="goto('page6')"
+                     name="page4">
+          REALTORS
+        </md-nav-item>
+        <md-nav-item md-nav-sref="listings"
+                     name="listings">
+          LISTINGS
+        </md-nav-item>
+        <md-nav-item md-nav-click="goto('page6')"
+                     name="page6">
+          CONTACT US
+        </md-nav-item>
+      </md-nav-bar>
+      <br>
+    </md-content>
+
+
+    <div id="app"
+         ui-view="root"></div>
+
+    <br> <br> <br> <br> <br>
+
+    <div id="footer"
+         layout="row">
+      <div flex>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sodales id elit ut gravida. Donec nunc nunc, mattis ac dictum
+        tempus, cursus ac sem.
+      </div>
+      <div flex>
+        contact info
+      </div>
+      <div flex>
+        map
+      </div>
+    </div>
+  </body>
 
 </html>

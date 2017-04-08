@@ -1,29 +1,25 @@
-// import './assets/parent.css'
-// import './assets/report.css'
+import "angular-material/angular-material.css";
+import "./index.scss";
 
-// import angular from 'angular';
-
-// import bootstrap from 'angular-ui-bootstrap';
-// import angulartics from 'angulartics';
-// import analyticsga from 'angulartics-google-analytics';
-
-// import reach from './app/features/reach';
-// import content from './app/features/content';
-// import audience from './app/features/audience';
-// import finance from './app/features/finance';
-// import error from './app/features/error';
-
-// import routing from './routing';
-// import init from './init';
-// init();
-
+// module imports
 import angular from "angular";
 import router from "angular-ui-router";
-
+import material from "angular-material";
+import bootstrap from "angular-ui-bootstrap";
+import animate from "angular-animate";
 import home from "./features/home";
+// non-named module imports
+
+// configs
 import routing from "./routing";
 
 // Main angular app
-var app = angular.module("app", [home, router]).config(routing);
+var app = angular
+  .module("app", [home, router, material, bootstrap, animate])
+  .config(routing)
+  .run(function($rootScope, $state, $stateParams) {
+    $rootScope.$state = $state;
+    $rootScope.$stateParams = $stateParams;
+  });
 
 export default app.name;

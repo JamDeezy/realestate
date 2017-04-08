@@ -1,6 +1,6 @@
-import angular from "angular";
+import "./home.scss";
 
-import style from "./home.scss";
+import angular from "angular";
 import HomeController from "./home.controller";
 
 export default angular

@@ -29,6 +29,7 @@ export default new Config().merge({
         test: /\.s?css$/,
         use: [
           "style-loader",
+          "css-loader",
           "sass-loader",
           {
             loader: "postcss-loader",

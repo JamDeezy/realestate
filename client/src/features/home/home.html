@@ -1,1 +1,68 @@
-<h1>Welcome home</h1>
+<div class="home">
+  <!-- Carousel -->
+  <div uib-carousel
+       active="active"
+       interval="10000">
+
+    <div uib-slide
+         ng-repeat="card in carouselCards track by card.id"
+         index="card.id"
+         class="carousel-item">
+      <img ng-src="{{card.img}}">
+
+      <div class="caption">
+        <p class="header">{{card.header}}</p>
+        <p class="subheader">{{card.subheader}}</p>
+        <md-button class="md-raised md-primary"
+                   ui-sref="{{card.route}}">Find out more</md-button>
+      </div>
+    </div>
+  </div>
+
+  <br> <br> <br> <br> <br>
+
+  <!-- Info -->
+  <md-content class="md-padding">
+    <div class="title">About our services</div>
+    <div class="sub-title">We da best</div>
+
+    <div layout="row"
+         layout-xs="column">
+      <div flex
+           class="box-item"
+           ng-repeat="box in infoBoxes">
+        <i class="fa {{box.icon}}"></i>
+        <p class="header">{{box.header}}</p>
+        <p class="subheader">{{box.subheader}}</p>
+        <md-button class="md-primary"
+                   ui-sref="{{box.route}}">Find out more...</md-button>
+      </div>
+    </div>
+  </md-content>
+
+  <br> <br> <br> <br> <br>
+
+  <div>
+    <div class="title">Featured Listings</div>
+    <div class="sub-title">We da best</div>
+
+    <!-- Featured listings -->
+    <div layout="row"
+         layout-xs="column">
+      <div flex
+           class="featured-listing"
+           ng-repeat="listing in featuredListingsOne">
+        <img ng-src="{{listing.img}}">
+      </div>
+    </div>
+    <div layout="row"
+         layout-xs="column">
+      <div flex
+           class="featured-listing"
+           ng-repeat="listing in featuredListingsTwo">
+        <img ng-src="{{listing.img}}">
+      </div>
+    </div>
+  </div>
+
+</div>

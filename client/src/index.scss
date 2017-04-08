@@ -1,0 +1,33 @@
+/* Global css */
+
+.social {
+  color: black;
+  padding: 0 5px;
+  text-decoration: none;
+
+  &:visited {
+    color: black;
+  }
+
+  i {
+    line-height: 15px;
+    height: 15px;
+    font-size: 15px;
+  }
+}
+
+.center-width {
+  margin: 0px auto;
+  width: 1280px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+#footer {
+  background: #333;
+  color: white;
+  height: 300px;
+  padding: 50px;
+}
