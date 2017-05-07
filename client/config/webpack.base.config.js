@@ -27,18 +27,7 @@ export default new Config().merge({
       },
       {
         test: /\.s?css$/,
-        use: [
-          "style-loader",
-          "css-loader",
-          "sass-loader",
-          {
-            loader: "postcss-loader",
-            options: {
-              sourceMap: "inline",
-              config: "config/postcss.config.js"
-            }
-          }
-        ]
+        use: ExtractTextPlugin.extract(["css-loader", "sass-loader"])
       },
       {
         test: /\.html$/,

@@ -3,7 +3,7 @@ export default [
   "$locationProvider",
   "$stateProvider",
   function($urlRouterProvider, $locationProvider, $stateProvider) {
-    $urlRouterProvider.otherwise("/home");
+    $urlRouterProvider.when("/", "/home");
     $locationProvider.html5Mode(true);
 
     $stateProvider.state("home", {
