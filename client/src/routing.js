@@ -8,22 +8,21 @@ export default [
 
     $stateProvider.state("home", {
       url: "/home",
-      views: {
-        root: {
-          template: require("./features/home/home.html"),
-          controller: "HomeController",
-          controllerAs: "home"
-        }
-      }
+      template: require("./features/home/home.html"),
+      controller: "HomeController"
     });
+
     $stateProvider.state("listings", {
       url: "/listings",
-      views: {
-        root: {
-          template: "listings here",
-          controller: "HomeController",
-          controllerAs: "home"
-        }
+      template: require("./features/listings/listings.html"),
+      controller: "ListingsController"
+    });
+
+    $stateProvider.state("showListing", {
+      url: "/listings/:id",
+      template: "<h1>{{id}}</h1>",
+      controller: function($scope, $stateParams) {
+        $scope.id = $stateParams.id;
       }
     });
   }

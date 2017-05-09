@@ -1,0 +1,33 @@
+<div class="listings">
+  <div class="left">
+    <div data-ng-repeat="listing in listings">
+
+      <md-content class="md-padding"
+                  layout-xs="column"
+                  layout="row">
+        <md-card class="listings-card">
+          <a ui-sref="showListing({ id: listing.id })">
+            <div class="listings-card-img-container">
+              <img ng-src="{{listing.headerImage}}"
+                   class="listings-card-img">
+            </div>
+          </a>
+
+          <md-card-content>
+            <span class="md-headline">
+                {{listing.headerTitle}}
+              </span>
+          </md-card-content>
+        </md-card>
+      </md-content>
+
+    </div>
+  </div>
+
+  <div class="right">
+    <ui-gmap-google-map center='map.center'
+                        zoom='map.zoom'>
+    </ui-gmap-google-map>
+    <ui-view></ui-view>
+  </div>
+</div>

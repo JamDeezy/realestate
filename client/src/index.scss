@@ -25,14 +25,29 @@
   width: 100%;
 }
 
-#footer {
-  background: #333;
-  color: white;
-  height: 300px;
-  padding: 50px;
-}
+body {
+  display: flex;
+  flex-direction: column;
 
-// https://docs.angularjs.org/api/ng/directive/ngCloak
-[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
-  display: none !important;
+  #header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+
+  #app {
+    margin-top: 150px;
+    flex: 1;
+    flex-direction: column;
+  }
+
+  #footer {
+    flex-shrink: 0;
+    background: #333;
+    color: white;
+    height: 300px;
+    padding: 50px;
+  }
 }

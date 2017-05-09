@@ -14,57 +14,57 @@
 
   <body ng-app="app"
         ng-cloak>
-    <md-content class="md-padding">
-      <a class="social"
-         href="//www.facebook.com/jeffrey.shew.5?fref=ts"><i class="fa fa-facebook"></i></a>
-      <a class="social"
-         href="//www.google.ca/"><i class="fa fa-google"></i></a>
-      <a class="social"
-         href="//twitter.com/"><i class="fa fa-twitter"></i></a>
-      <a class="social"
-         href="//linkedin.com/"><i class="fa fa-linkedin"></i></a>
-    </md-content>
 
-    <md-content class="md-padding">
-      <md-nav-bar md-selected-nav-item="$state.current.name"
-                  nav-bar-aria-label="navigation links">
-        <span flex></span>
-        <md-nav-item md-nav-sref="home"
-                     name="home">
-          HOME
-        </md-nav-item>
-        <md-nav-item md-nav-click="goto('page6')"
-                     name="page2">
-          OWNERS
-        </md-nav-item>
-        <md-nav-item md-nav-click="goto('page6')"
-                     name="page3">
-          TENANTS
-        </md-nav-item>
-        <md-nav-item md-nav-click="goto('page6')"
-                     name="page4">
-          REALTORS
-        </md-nav-item>
-        <md-nav-item md-nav-sref="listings"
-                     name="listings">
-          LISTINGS
-        </md-nav-item>
-        <md-nav-item md-nav-click="goto('page6')"
-                     name="page6">
-          CONTACT US
-        </md-nav-item>
-      </md-nav-bar>
-      <br>
-    </md-content>
+    <header id="header">
+      <md-content class="md-padding">
+        <a class="social"
+           href="//www.facebook.com/jeffrey.shew.5?fref=ts"><i class="fa fa-facebook"></i></a>
+        <a class="social"
+           href="//www.google.ca/"><i class="fa fa-google"></i></a>
+        <a class="social"
+           href="//twitter.com/"><i class="fa fa-twitter"></i></a>
+        <a class="social"
+           href="//linkedin.com/"><i class="fa fa-linkedin"></i></a>
+      </md-content>
 
+      <md-content class="md-padding">
+        <md-nav-bar md-selected-nav-item="$state.current.name"
+                    nav-bar-aria-label="navigation links">
+          <span flex></span>
+          <md-nav-item md-nav-sref="home"
+                       name="home">
+            HOME
+          </md-nav-item>
+          <md-nav-item md-nav-click="goto('page6')"
+                       name="page2">
+            OWNERS
+          </md-nav-item>
+          <md-nav-item md-nav-click="goto('page6')"
+                       name="page3">
+            TENANTS
+          </md-nav-item>
+          <md-nav-item md-nav-click="goto('page6')"
+                       name="page4">
+            REALTORS
+          </md-nav-item>
+          <md-nav-item md-nav-sref="listings"
+                       name="listings">
+            LISTINGS
+          </md-nav-item>
+          <md-nav-item md-nav-click="goto('page6')"
+                       name="page6">
+            CONTACT US
+          </md-nav-item>
+        </md-nav-bar>
+        <br>
+      </md-content>
+    </header>
 
     <div id="app"
-         ui-view="root"></div>
+         ui-view></div>
 
-    <br> <br> <br> <br> <br>
-
-    <div id="footer"
-         layout="row">
+    <footer id="footer"
+            layout="row">
       <div flex>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sodales id elit ut gravida. Donec nunc nunc, mattis ac dictum
         tempus, cursus ac sem.
@@ -75,7 +75,7 @@
       <div flex>
         map
       </div>
-    </div>
+    </footer>
   </body>
 
 </html>

@@ -1,0 +1,41 @@
+.listings {
+  margin: 0 auto;
+  height: 100%;
+
+  .left {
+    margin: 0 500px 0 25px;
+
+    .listings-card {
+      width: 100%;
+
+      .listings-card-img-container {
+        width: 100%;
+        height: 300px;
+        overflow: hidden;
+        vertical-align: middle;
+
+        .listings-card-img {
+          min-height: 300px;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    .right {
+      display: none;
+    }
+  }
+
+  .right {
+    position: fixed;
+    width: 500px;
+    top: 174px;
+    right: 0px;
+
+    .angular-google-map-container {
+      height: 400px;
+    }
+  }
+}
