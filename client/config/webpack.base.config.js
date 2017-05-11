@@ -32,6 +32,10 @@ export default new Config().merge({
       {
         test: /\.html$/,
         loader: "raw-loader"
+      },
+      {
+        test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$/,
+        loader: "file-loader?name=[name].[ext]"
       }
     ]
   }

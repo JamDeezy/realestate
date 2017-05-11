@@ -8,14 +8,17 @@
         <md-card class="listings-card">
           <a ui-sref="showListing({ id: listing.id })">
             <div class="listings-card-img-container">
-              <img ng-src="{{listing.headerImage}}"
-                   class="listings-card-img">
+              <img ng-src="{{listing.header_photo.url}}"
+                   class="listings-card-img" />
             </div>
+            <img ng-if="!listing.available"
+                 ng-src="{{leased}}"
+                 class="leased" />
           </a>
 
           <md-card-content>
             <span class="md-headline">
-                {{listing.headerTitle}}
+                {{listing.header_title}}
               </span>
           </md-card-content>
         </md-card>

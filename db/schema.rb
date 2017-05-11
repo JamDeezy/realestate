@@ -11,13 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170507175209) do
+ActiveRecord::Schema.define(version: 20170510212909) do
 
   create_table "listing_details", force: :cascade do |t|
     t.integer  "listing_id", limit: 4
-    t.decimal  "bathroom",             precision: 10
-    t.decimal  "bedroom",              precision: 10
-    t.decimal  "area",                 precision: 10
+    t.float    "bathroom",   limit: 24
+    t.float    "bedroom",    limit: 24
+    t.float    "area",       limit: 24
     t.boolean  "parking"
     t.boolean  "furnished"
     t.boolean  "balcony"
@@ -27,10 +27,18 @@ ActiveRecord::Schema.define(version: 20170507175209) do
 
   add_index "listing_details", ["listing_id"], name: "index_listing_details_on_listing_id", using: :btree
 
+  create_table "listing_photos", force: :cascade do |t|
+    t.integer "listing_id",        limit: 4
+    t.string  "url",               limit: 255
+    t.string  "imgur_hash",        limit: 255
+    t.string  "imgur_delete_hash", limit: 255
+    t.boolean "is_header"
+  end
+
   create_table "listings", force: :cascade do |t|
     t.string   "title",         limit: 255
     t.text     "description",   limit: 65535
-    t.decimal  "price",                       precision: 2
+    t.float    "price",         limit: 24
     t.string   "postal_code",   limit: 255
     t.string   "address_one",   limit: 255
     t.string   "address_two",   limit: 255
