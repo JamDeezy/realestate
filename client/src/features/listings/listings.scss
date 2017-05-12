@@ -3,7 +3,7 @@
   height: 100%;
 
   .left {
-    margin: 0 500px 0 25px;
+    margin: 0 700px 0 25px;
 
     .listings-card {
       width: 100%;
@@ -21,7 +21,7 @@
         }
       }
 
-      .leased {
+      .listings-leased {
         position: absolute;
         top: 0;
         left: 0;
@@ -38,7 +38,7 @@
 
   .right {
     position: fixed;
-    width: 500px;
+    width: 700px;
     top: 174px;
     right: 0px;
 
@@ -46,4 +46,49 @@
       height: 400px;
     }
   }
+}
+
+// Range slider css
+.custom-slider.rzslider .rz-bar {
+  background: #ffe4d1;
+  height: 2px;
+}
+.custom-slider.rzslider .rz-selection {
+  background: orange;
+}
+
+.custom-slider.rzslider .rz-pointer {
+  width: 8px;
+  height: 16px;
+  top: auto; /* to remove the default positioning */
+  bottom: 0;
+  background-color: #333;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.custom-slider.rzslider .rz-pointer:after {
+  display: none;
+}
+
+.custom-slider.rzslider .rz-bubble {
+  bottom: 14px;
+}
+
+.custom-slider.rzslider .rz-limit {
+  font-weight: bold;
+  color: orange;
+}
+
+.custom-slider.rzslider .rz-tick {
+  width: 1px;
+  height: 10px;
+  margin-left: 4px;
+  border-radius: 0;
+  background: #ffe4d1;
+  top: -1px;
+}
+
+.custom-slider.rzslider .rz-tick.rz-selected {
+  background: orange;
 }

@@ -23,6 +23,7 @@
     "angular-simple-logger": "^0.1.7",
     "angular-ui-bootstrap": "^2.5.0",
     "angular-ui-router": "^0.4.2",
+    "angularjs-slider": "^6.1.1",
     "babel-cli": "^6.24.0",
     "babel-loader": "^6.4.1",
     "babel-preset-env": "^1.2.2",

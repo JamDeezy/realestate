@@ -1,6 +1,6 @@
 <div class="listings">
   <div class="left">
-    <div data-ng-repeat="listing in listings">
+    <div data-ng-repeat="listing in displayedListings">
 
       <md-content class="md-padding"
                   layout-xs="column"
@@ -13,7 +13,7 @@
             </div>
             <img ng-if="!listing.available"
                  ng-src="{{leased}}"
-                 class="leased" />
+                 class="listings-leased" />
           </a>
 
           <md-card-content>
@@ -31,6 +31,28 @@
     <ui-gmap-google-map center='map.center'
                         zoom='map.zoom'>
     </ui-gmap-google-map>
-    <ui-view></ui-view>
+    <br>
+
+    <fieldset class="standard">
+      <legend>Filters</legend>
+      <br>
+      <div layout-wrap
+           layout-gt-sm="row">
+        Price
+        <rzslider class="custom-slider"
+                  rz-slider-model="filters.price.min"
+                  rz-slider-high="filters.price.max"
+                  rz-slider-options="filters.price.options"></rzslider>
+      </div>
+
+      <br>
+      <div layout-wrap
+           layout-gt-sm="row">
+        <div flex-gt-sm="50">
+          <md-checkbox ng-model="filters.available">
+            Available
+          </md-checkbox>
+        </div>
+      </div>
+    </fieldset>
   </div>
-</div>

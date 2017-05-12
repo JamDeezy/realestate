@@ -92,6 +92,10 @@ angular-ui-router@^0.4.2:
   version "1.5.11"
   resolved "https://registry.yarnpkg.com/angular/-/angular-1.5.11.tgz#8c5ba7386f15965c9acf3429f6881553aada30d6"
 
+angularjs-slider@^6.1.1:
+  version "6.1.1"
+  resolved "https://registry.yarnpkg.com/angularjs-slider/-/angularjs-slider-6.1.1.tgz#488461669840c5bba34b7608b9e00667a1435693"
+
 ansi-escapes@^1.1.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/ansi-escapes/-/ansi-escapes-1.4.0.tgz#d3a8a83b319aa67793662b13e761c7911422306e"
