@@ -4,7 +4,7 @@ class API::ListingsController < ApplicationController
     @listings = Listing.order(
       available: :desc,
       updated_at: :desc
-    )
+    ).includes(:header_photo, :listing_photos)
 
     render json: @listings,
            methods: :header_title,
@@ -14,7 +14,8 @@ class API::ListingsController < ApplicationController
   def featured
     @featuredListings = Listing.featured.order(
       updated_at: :desc
-    )
+    ).includes(:listing_photos)
+
     render json: @featuredListings,
            methods: :header_title,
            include: { header_photo: { only: [:id, :url] } }
